@@ -1,0 +1,200 @@
+1. Expalin constructor chaining  using this() with example.
+It is a process to call one construcor from another constructor with in a same class
+
+class Hospital{
+
+String hospitalName;
+String location;
+
+Hospital(){
+this("government hospital");
+
+}
+
+Hospital(String hospitalName, String location){
+this.hospitalName = hospitalName;
+this.location = location;
+}
+
+}
+
+class HospitalRunner{
+
+public static void main (String[] args){
+
+Hospital h = new Hospital();
+
+h.hospitalName;
+h.location;
+}
+}
+
+
+2. Expalin default values assigned to instance variable in java with example.
+
+class Bank{
+
+int bankId;
+String bankName;
+
+public getBankDetals(){
+System.out.println("Bank id is " + bankId);
+System.out.println("Bank name is " + bankName);
+
+}
+}
+
+class BankRunner{
+
+public static void main(String[] args){
+
+Bank b = new Bank();
+b.getBankDetals();
+}
+}
+
+
+3.Write a java program to perform Crud operation on an Array
+
+Create an array
+read an element
+update an array
+delete  an element
+
+
+class Ibacoo{
+
+String iceCreams[] = new String[3];
+int index;
+
+public boolean addIceCream (String iceCream){ 
+
+boolean isIceCreamAdded = false;
+  
+if(index < iceCreams.length ){
+if(iceCream != null){
+iceCreams[index++] = iceCream;
+isIceCreamAdded = true;
+}
+  else
+System.out.println(iceCream + " not valid");
+  } 
+  else
+System.out.println("Ibacoo is full.....") ; 
+  
+return isIceCreamAdded;
+}
+
+public void getIceCreams(){
+System.out.println("The list of IceCreams are :");
+
+for(String iceCream : iceCreams)
+System.out.println(iceCream);
+
+}
+	
+public boolean updatedIceCream(String existingIceCreamName, String UpdatedIceCreamName)	{
+	
+boolean isIceCreamUpdated = false;
+for ( int index = 0; index < iceCreams.length; index++){ 
+	
+if(iceCreams[index] == existingIceCreamName){
+	iceCreams[index] = UpdatedIceCreamName;
+	isIceCreamUpdated = true;
+	}
+if(isIceCreamUpdated == false){
+	System.out.println(existingIceCreamName + "is not found");
+	}	
+	}
+return isIceCreamUpdated;
+	}
+}
+
+
+4. write a program to demonstrate a default construcor.
+
+class Book{
+
+String bookname;
+String autherName;
+int price;
+
+Book(){
+
+}
+
+public void getDetails(){
+System.out.println("bookname is " + bookname);
+System.out.println("autherName is " + autherName);
+System.out.println("price is " + price);
+
+}
+}
+
+class BookRunner{
+
+public static void main(String[] args){
+
+Book b = new Book();
+b.getDetails();
+
+}
+}
+
+
+5.Write a program using parameterised construcor.
+
+class Bag {
+
+int bagId;
+double price;
+String color;
+    
+Bag(int bagId, double price, String color) {
+this.bagId = bagId;
+this.price = price;
+this.color = color;
+}
+
+public void getDetails() {
+System.out.println(bagId);
+System.out.println(price);
+System.out.println(color);
+}
+}
+
+class BagRunner{
+
+public static void main(String[] args){
+
+Bag b = new Bag(1, 999, "Black");
+b.getDetails();
+
+}
+}
+
+
+6. what is constructor in java ? who provide the default construcor.
+
+construcor is a special method same name as class name but does not have any return type.
+complier provides a defalut construcor to every java class.
+
+
+7. can constructor have return type. why?
+
+construcor does not have return type because it should be same as class name.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
